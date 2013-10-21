@@ -11,7 +11,7 @@ int main()
  int para_cek,akt1,akt2;
  char harf,harf2;
 
-
+//Kullanıcı adı yerine Hesap no olarak aldım
 baslangic_noktasi: // goto yu buraya çağırır...
   printf("\tABC BANKASINA HOSGELDINIZ\n");            
   printf("\t-------------------------------------\n");
