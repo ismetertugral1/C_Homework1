@@ -5,17 +5,18 @@
 
 int main()
 {
- int hesap_no1=100,hesap_no2=200,sifre1=111,sifre2=222, sayac=0;
- int gecici_no,gecici_sifre=1,secim,deneme_sifre1,param ;
+ int hesap_no1=30,hesap_no2=40;
+ int sifre1=33,sifre2=44, sayac=0;
+ int gecici_no,gecici_sifre=1;
+ int secim,deneme_sifre1,param ;
  int top_param1=0,top_param2=0, deneme_sifre2,gecici_sifre1;
  int para_cek,akt1,akt2;
  char harf,harf2;
 
 //Kullanıcı adı yerine Hesap no olarak aldım
 baslangic_noktasi: // goto yu buraya çağırır...
-  printf("\tABC BANKASINA HOSGELDINIZ\n");            
-  printf("\t-------------------------------------\n");
-  printf("\tbanka hesap numaranizi giriniz: ");       
+  printf("\tHOSGELDINIZ\n");            
+  printf("\tBanka hesap numaranizi giriniz: ");       
   scanf("%d",&gecici_no);
 
 
@@ -25,8 +26,8 @@ while(gecici_no!=hesap_no1 && gecici_no!=hesap_no2)
 {
 if(gecici_no==-1)//Hesap nosu yanlışsa 
   break;
-  printf("\tYanlis hesap numarasi!!!!\n");
-  printf("\tlutfen tekrar deneyiniz: \n");
+  printf("\tYanlis hesap numarasi girdiniz!\n");
+  printf("\tLutfen tekrar deneyiniz: \n");
   scanf("%d",&gecici_no);
 
 }
@@ -42,18 +43,18 @@ if(sayac==3)//Şifre 3defa yanlış girilmesi durumu
 goto baslangic_noktasi;
 
 }
-  printf("\n\tsifrenizi giriniz: ");
+  printf("\n\tSifrenizi giriniz: ");
   scanf("%d",&gecici_sifre);
 sayac++;
 } // while ın ... 
 
 while(secim!=7)//seçim 7 hariç olduğunda döndür
 {
-  printf("\n\tBANKA ISLEMLERI MENUSU\n");
-  printf("\t1. Sifre Degistirme\n");
+  printf("\n\tISLEMLER MENUSU\n");
+  printf("\t1. Sifre Degistir\n");
   printf("\t2. Para Yatirma\n");
   printf("\t3. Para Cekme\n");
-  printf("\t4. Hesap Yazdir\n");
+  printf("\t4. Bakiye\n");
   printf("\t5. Para Transferi\n");
   printf("\t6. Hesap girisi\n");
   printf("\t7. Cikis\n");
@@ -61,14 +62,14 @@ while(secim!=7)//seçim 7 hariç olduğunda döndür
   scanf("%d",&secim);
 if(secim==1)
 {
-  printf("\tyeni Sifreniz");
+  printf("\tYeni Sifreniz");
   scanf("%d",&deneme_sifre1);
-  printf("\n\tyeniden sifrenizi giriniz");
+  printf("\n\tYeniden sifrenizi giriniz");
   scanf("%d",&deneme_sifre2); 
 while(deneme_sifre1!=deneme_sifre2)
 {
   printf("\n\tEslesme Yapilamadi\n");
-  printf("\tyeniden sifrenizi giriniz:");
+  printf("\tYeniden sifrenizi giriniz:");
   scanf("%d",&deneme_sifre2); 
 }//while(deneme)
 if(deneme_sifre1==deneme_sifre2)
@@ -94,9 +95,9 @@ if(secim==3)
 
 if(top_param1>para_cek)
 {
-  printf("\tcekilen para miktari: %d\n",para_cek);
+  printf("\tCekilen para miktari: %d\n",para_cek);
    top_param1=(top_param1)-(para_cek);
-  printf("\thesabinizda %d kalmistir.\n",top_param1); 
+  printf("\tHesabinizda %d kalmistir.\n",top_param1); 
 
 }
 
@@ -112,7 +113,7 @@ switch(harf)
    printf("\tCekilen tutar %d Bankaya %d borclandiniz.\n",para_cek,top_param1);
   break;
   case 'h':
-  case 'H': printf("\tisleminiz iptal Olmustur..\n");
+  case 'H': printf("\tIsleminiz iptal Olmustur..\n");
 } // switch
 }// if(top_param)
 } // if(secim==3)
@@ -138,7 +139,7 @@ if (top_param1<akt1)
 if(secim==6)
 goto baslangic_noktasi;
 if(secim==7)
-  printf("\t\tHOSCAKALiN...!!!\n");
+  printf("\t\tGULE GULE.!!!\n");
 
 
 }//while(secim) 
@@ -158,7 +159,7 @@ if(sayac==3)
 goto baslangic_noktasi;
 
 }
-  printf("\tsifrenizi giriniz:");
+  printf("\tSifrenizi giriniz:");
   scanf("%d",&gecici_sifre);
 sayac++;
 } // while ın ... 
@@ -166,26 +167,26 @@ sayac++;
 
 while(secim!=7)
 {
-  printf("\nBANKA ISLEMLERI MENUSU\n");
-  printf("1. Sifre Degistirme\n");
+  printf("\nISLEMLER MENUSU\n");
+  printf("1. Sifre Degistir\n");
   printf("2. Para Yatirma\n");
   printf("3. Para Cekme\n");
-  printf("4. Hesap Yazdir\n");
+  printf("4. Bakiye\n");
   printf("5. Para Transferi\n");
   printf("6. Hesap girisi\n");
   printf("7. Cikis\n");
-  printf(">>Seciminiz");
+  printf("--Seciminiz");
   scanf("%d",&secim);
 if(secim==1)
 {
-  printf("yeni Sifreniz\n");
+  printf("Yeni Sifreniz\n");
   scanf("%d",&deneme_sifre1);
-  printf("yeniden sifrenizi giriniz\n");
+  printf("Yeniden sifrenizi giriniz\n");
   scanf("%d",&deneme_sifre2); 
 while(deneme_sifre1!=deneme_sifre2)
 {
   printf("Eslesme Yapilamadi\n");
-  printf("yeniden sifrenizi giriniz\n");
+  printf("Yeniden sifrenizi giriniz\n");
   scanf("%d",&deneme_sifre2); 
 }//while(deneme)
 if(deneme_sifre1==deneme_sifre2)
@@ -211,9 +212,9 @@ if(secim==3)
 
 if(top_param2>para_cek)
 {
-  printf("cekilen para miktari: %d\n",para_cek);
+  printf("Cekilen para miktari: %d\n",para_cek);
    top_param2=(top_param2)-(para_cek);
-  printf("hesabinizda %d kalmistir.\n",top_param2); 
+  printf("Hesabinizda %d kalmistir.\n",top_param2); 
 
 }
 
@@ -229,7 +230,7 @@ switch(harf)
    printf("Cekilen tutar %d Bankaya %d borclandiniz.\n",para_cek,top_param2);
   break;
   case 'h':
-  case 'H': printf("isleminiz iptal Olmustur..\n");
+  case 'H': printf("Isleminiz iptal Olmustur..\n");
 } 
 
 }// if(top_param)
@@ -256,12 +257,12 @@ if (top_param2<akt2)
 if(secim==6)
 goto baslangic_noktasi;
 if(secim==7)
-  printf("HOSCAKALiN...!!!\n");
+  printf("GULE GULE.!!!\n");
 
 }//while(secim) 
 }//2.if 
 
-  printf("\n\t*****Program Bitti******\n\n");
+  printf("\n\t.END.\n\n");
   system("PAUSE");
 return 0; 
 }
